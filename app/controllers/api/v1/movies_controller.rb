@@ -33,6 +33,8 @@ module Api
         end
       end
 
+      # POST /movies endpoint using layered design pattern
+      
       def create
         movie_creator = Movies::AddMovies.new(params[:movie])
         movie = movie_creator.create_movie
